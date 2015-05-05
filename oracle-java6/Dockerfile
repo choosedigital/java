@@ -1,4 +1,4 @@
-FROM choosedigital/ubuntu:latest
+FROM ubuntu
 
 RUN \
   echo oracle-java6-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
