@@ -8,6 +8,10 @@
 # Pull base image.
 FROM ubuntu
 
+RUN apt-get install -y software-properties-common
+RUN add-apt-repository -y ppa:webupd8team/java
+RUN apt-get update
+
 # Install Java.
 RUN \
   echo oracle-java7-installer shared/accepted-oracle-license-v1-1 select true | debconf-set-selections && \
